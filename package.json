@@ -1,0 +1,31 @@
+{
+  "name": "challenge",
+  "private": true,
+  "version": "0.1.1",
+  "scripts": {
+    "dev": "concurrently \"node server.mjs\" \"vite\"",
+    "client": "vite",
+    "server": "node server.mjs",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "concurrently \"node server.mjs\" \"vite preview\"",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "mobx": "^6.13.1",
+    "mobx-react-lite": "^4.0.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^7.5.0",
+    "sass": "^1.55.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vitest": "^2.0.3",
+    "ws": "^8.10.0"
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: var(--x-large) 0;
+  max-width: var(--max-width);
+}
+
+.header-link {
+  display: block;
+}
+
+.header-logo {
+  width: 128px;
+  color: var(--color-foreground3);
+}
+
+@media (prefers-color-scheme: light) {
+  .header-logo {
+    color: var(--color-foreground4);
+  }
+}

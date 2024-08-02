@@ -1,0 +1,33 @@
+.text-field-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-field {
+  width: 100%;
+  max-height: 44px;
+  padding: var(--small) var(--x-small);
+  border: none;
+  border-radius: var(--x-small);
+  background-color: var(--color-primary-grey4);
+  color: var(--color-foreground3);
+  box-shadow: var(--box-shadow-dark), 0 0 0 1px var(--color-primary-grey5) inset;
+  font-family: inherit;
+  font-size: var(--large);
+}
+
+.text-field:focus {
+  outline: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .text-field {
+    background-color: var(--color-primary-lightgrey1);
+    color: var(--color-primary-grey4);
+    border: 1px solid var(--color-primary-lightgrey2);
+    box-shadow: var(--box-shadow-light);
+  }
+  .text-field:focus {
+    outline: none;
+  }
+}

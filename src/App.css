@@ -1,0 +1,30 @@
+.app-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.app-title {
+  margin: var(--large) 0;
+}
+
+.instrument-list {
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 332px);
+  gap: var(--x-large);
+}
+
+@media (max-width: 900px) {
+  .instrument-list {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .app-title {
+    margin: var(--large) 0;
+  }
+}

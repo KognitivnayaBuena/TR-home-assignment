@@ -1,0 +1,14 @@
+.root {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  transform: scaleY(0);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  transform: scaleY(1);
+}
