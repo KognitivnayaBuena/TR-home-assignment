@@ -23,42 +23,7 @@ yarn dev
 You can see the client application running in your browser by going to http://localhost:3000.
 
 
-## Tasks
-
-### Task 1
-
-Create a form that allows a user to submit an ISIN and add it to a watch list.
-
-#### User Stories
-
-> As a user, I should be able to submit an ISIN and it should be added to my watch list.
-
-> As a user, I should not be able to subscribe to the same ISIN twice so that I don’t get confused by seeing multiple versions of the same stock.
-
-> As a user, I should not be able to subscribe to an empty or invalid ISIN.
-
-> Validation rules: An ISIN is a 12-character alphanumeric code. It consists of three parts: A two letter country code, a nine character alpha-numeric national security identifier, and a single check digit.
-> Example:- US0378331005.
-
-### Task 2
-
-Create the UI and render the watch list created in the previous task to the DOM.
-
-#### User Stories
-
-> As a user, I should be able to view a list of my subscribed stocks displaying the latest stock price received from the WebSocket connection so that I can keep track of multiple stocks at the same time.
-
-> As a user, I should be able to unsubscribe from a stock that’s in my watch list so that I can focus on the stocks I’m interested in.
-
-> As a user, I should be notified if the websocket disconnects and the data is not up to date so that I know that the price is not accurate.
-
-> As a user, I should be able to view their stocks on desktop and mobile screen widths so that I am able to use the app on my mobile browser.
-
-### Task 3
-
-At this point, you can consider the challenge to be complete.
-
-This task is intentionally left open for you to add any feature you want to the application. Anything is valid, from improvements to Accessibility all the way to UI Transitions, CSS, etc.
+## Application description
 
 ---
 | Term | Definition |
@@ -69,39 +34,9 @@ This task is intentionally left open for you to add any feature you want to the 
 | `ask` | The lowest price at which a seller will sell the instrument. |
 ---
 
-## Socket Reference
+The application can add an instrument by ISIN form to the watchlist, by using the form, the user is able to enter ISIN and see how ISIN needs to be validated. Also, the application is not allowed to add multiple exact same ISINs.
+Instruments are shown on a watchlist. They update continuously while the user has a connection. In case the connection is lost I notify the user with an alert and try to reconnect to the WebSocket. In case the connection is restored user receives a notification with a success message. All instruments after reconnection are updated with new information.
 
-The WebSocket server is started when you run `yarn dev`. You can then connect to it at
-
-```URL
-ws://localhost:8425/
-```
-
-To subcribe to a specific security
-
-```JSON
-{
-    "subscribe": "${ISIN}"
-}
-```
-
-To unsubscribe to a specific security
-
-```JSON
-{
-    "unsubscribe": "${ISIN}"
-}
-```
-
-#### Example Request
-
-To subscribe to the BASF instrument you would use
-
-```JSON
-{
-    "subscribe": "DE000BASF111"
-}
-```
 
 
 ## Application overview
