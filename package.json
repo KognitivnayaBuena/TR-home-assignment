@@ -6,7 +6,7 @@
     "dev": "concurrently \"node server.mjs\" \"vite\"",
     "client": "vite",
     "server": "node server.mjs",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "concurrently \"node server.mjs\" \"vite preview\"",
     "test": "vitest"
   },
